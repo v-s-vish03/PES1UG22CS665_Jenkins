@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ PES1UG22CS665_Jenkins.cpp -o output'
+                sh 'g++ PES1UG22CS665.cpp -o output'
                 echo 'Build Stage Successful'
             }
         }
@@ -12,13 +12,13 @@ pipeline {
         stage('Test') {
             steps {
                 sh './output'
-                echo 'Test Stage Successful
+                echo 'Test Stage Successful'
             }
         }
         
         stage('Deploy') {
             steps {
-                echo 'Deployment Successful
+                echo 'Deployment Successful'
             }
         }
     }
